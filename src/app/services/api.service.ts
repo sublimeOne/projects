@@ -6,18 +6,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  private endpoint: string = 'https://jsonplaceholder.typicode.com/albums';//'https://developers.zomato.com/api/v2.1/categories';
+  albums;
+  private albumsndpoint = 'https://jsonplaceholder.typicode.com/albums';
+  
 
   constructor( 
     private http: HttpClient) { 
 
     }
 
+  getAlbums() {
+    return this.http.get(this.albumsndpoint);
+  } 
 
-  getItems() {
-    return this.http.get(this.endpoint);
+  getImages(albumId: number){
+    return this.http.get(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`);
   }
 
-
-  
 }
