@@ -1,5 +1,5 @@
+import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-categories',
@@ -8,15 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private http: HttpClientModule) { }
+  albums: any = [];
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.albums = this.api.getAlbums().subscribe(res => {
+      console.log(res);
+      this.albums = res;
+   })
+    console.log(this.albums)
   }
 
-  private getCategories(){
 
-    let catetories = [];
-
-  }
 
 }
