@@ -1,20 +1,22 @@
-<div>
-    <h3>Albums collection</h3>
-<div>
-  <div class="card">
-    <div class="card-body">
-     <app-data></app-data>
-    </div>
-  </div>
-</div>
-    <div class="row">
-      <div class="col-sm-4" *ngFor="let album of albums">
-        <div class="card">
-          <div class="card-body">
-            <a routerLink="photos/{{album.id}}">{{album.title}}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
+<div style="text-align:center"> 
+  <h3>Album Titles</h3>
 
+</div>
+
+
+<div fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
+  
+  
+<mat-card *ngFor="let album of albums"  fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
+
+    <img mat-card-image src="https://kakiseni.org/wp-content/uploads/2018/03/250X250.png" class="image">
+    <mat-card-content> <a routerLink="photos/{{album.id}}">{{album.title}}</a></mat-card-content>
+  </mat-card> 
+
+</div>
+ 
+ 
+
+
+ 
