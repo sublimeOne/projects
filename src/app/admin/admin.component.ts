@@ -1,4 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
+
+export interface admin{
+  id: number;
+  name: string;
+  title: string;
+  }
+ 
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +17,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+   
   }
 
 }

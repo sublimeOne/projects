@@ -22,10 +22,6 @@
     text-decoration: none;
   }
  
-  .search-form {
-    width: 90%;
-  }
-
   
   .mr-10 {
     margin-right: 10%;
@@ -35,3 +31,8 @@
     margin-left: 5%;
   }
   
+  @media (max-width: 600px) {
+    mat-card {
+      min-width:17rem;
+    }
+  }
