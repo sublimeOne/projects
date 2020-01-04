@@ -23,4 +23,5 @@ export class ApiService {
     return this.http.get(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`);
   }
 
+
 }
