@@ -18,12 +18,20 @@ import { MatInputModule } from "@angular/material/input";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+import { LoginComponent } from './login/login.component';
+import { MatSelectModule } from "@angular/material/select";
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
-    PhotosComponent
+    PhotosComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
     MatFormFieldModule,
     MatInputModule,
     FlexLayoutModule,
-    NgMatSearchBarModule
+    NgMatSearchBarModule,
+    MatSelectModule,
+    ReactiveFormsModule ,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
