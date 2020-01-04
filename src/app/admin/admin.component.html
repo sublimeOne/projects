@@ -1,1 +1,10 @@
-<p>admin works!</p>
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="Name">
+      </mat-form-field>
+  
+     <button mat-button color="primary" (ngSubmit)="post()">Create Album</button>
+
+    </div>
+  </form>

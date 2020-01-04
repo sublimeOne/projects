@@ -6,7 +6,7 @@
     <h3>Album {{albumId}}</h3>
     <div class="row">
       <div class="col-md-3 photo" *ngFor="let photo of photos">
-        <img src={{photo.url}} class="img-fluid" />
+        <img (click)="openDialog(photo)" src={{photo.url}} class="img-fluid" />
       </div>
     </div>   
   </div>
