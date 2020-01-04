@@ -28,7 +28,6 @@ export class CategoriesComponent implements OnInit {
   }
 
   loadAlbumTitles() {
-    debugger;
     this.spinnerService.show();
     this.albums = this.api.getAlbums().subscribe(res => {
       this.albums = res;
